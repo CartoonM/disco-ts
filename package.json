@@ -1,19 +1,26 @@
 {
   "name": "disco-ts",
-  "type": "module",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
+  "author": "CartoonM",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --project ./tsconfig.json",
-    "start": "node --loader ts-node/esm ./src/main.ts"
+    "build": "rimraf ./dist && rollup --config",
+    "start": "rimraf ./dist && rollup --config && node ./dist/src/index.js"
   },
-  "author": "CartoonM",
-  "license": "MIT",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-swc": "^0.3.0",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.12.7",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.17.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-typescript-paths": "^1.5.0",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "tslib": "^2.6.2",
     "typescript": "^5.4.5"
   },

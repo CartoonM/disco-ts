@@ -5,8 +5,8 @@ import {
   type ClassProvider,
   isFactoryProvider,
   isValueProvider,
-} from "./helpers/index.js";
-import { INJECT_PARAMETERS_METADATA } from "./constants.js";
+} from "~/utils";
+import { INJECT_PARAMETERS_METADATA } from "~/constants";
 
 export class Container {
   private readonly providers = new Map<InjectToken, Provider>();

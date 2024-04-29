@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf ./dist && rollup --config",
-    "start": "rimraf ./dist && rollup --config && node ./dist/src/index.js"
+    "start": "ts-node ./src/index.ts"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",

@@ -20,5 +20,12 @@
   },
   "include": ["./src/**/*", "./src/global.d.ts"],
   "exclude": ["node_modules", "**/*.spec.ts"],
-  "lib": ["es2022", "esnext.decorators"]
+  "lib": ["es2022", "esnext.decorators"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "files": true,
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }

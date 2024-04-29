@@ -7,6 +7,7 @@
     "removeComments": true,
     "noLib": false,
     "useUnknownInCatchVariables": false,
+    "esModuleInterop": true,
     "strictNullChecks": true,
     "target": "ES2022",
     "sourceMap": true,
@@ -18,8 +19,7 @@
       "~/*": ["./*"]
     }
   },
-  "include": ["./src/**/*", "./src/global.d.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts"],
+  "include": ["./src/**/*"],
   "lib": ["es2022", "esnext.decorators"],
   "ts-node": {
     "require": ["tsconfig-paths/register"],
